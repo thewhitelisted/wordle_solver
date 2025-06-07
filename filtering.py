@@ -17,7 +17,6 @@ def expected_entropy(guess: str, candidates: list[str]) -> float:
         if count > 0:
             probability = count / total
             entropy -= probability * math.log2(probability)
-    print(f"Entropy for guess '{guess}': {entropy:.4f}")
     return entropy
 
 def best_guess(possible: list[str], candidates: list[str]) -> str:

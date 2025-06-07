@@ -17,11 +17,14 @@ def main():
             print("Invalid feedback. Please enter a 5-character string with G, Y, B.")
             continue
         answers = filter_candidates(answers, guess, feedback)
+        if len(answers) == 1:
+            print(f"the answer is: {answers[0]}")
+            break
         # filter the possible words based on the guess and feedback
         best_guess_word = best_guess(guesses, answers)
         print(f"Best guess based on current information: {best_guess_word}")
         # update the possible words
-        if len(possible) == 0:
+        if len(answers) == 0:
             print("No possible words left. Please check your inputs.")
             break
         print(f"Remaining possible words: {len(answers)}")
