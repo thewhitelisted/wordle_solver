@@ -3,7 +3,7 @@ from filtering import best_guess, filter_candidates
 
 def main():
     # list of words
-    possible = open('words.txt').read().splitlines()
+    possible = open('guess.txt').read().splitlines()
     while True:
         # get the guess from the user
         guess = input("Enter your guess (5-letter word): ").strip().lower()
